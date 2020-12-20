@@ -1,0 +1,23 @@
+<div id="filterrific_results">
+  <div>
+  </div>
+
+  <table class="table table-bordered table-striped">
+    <tr>
+      <th>Full Name</th>
+      <th>Address</th>
+      <th>Email</th>
+      <th>Created at</th>
+    </tr>
+    <% users.each do |user| %>
+      <tr>
+        <td><%= user.full_name %></td>
+        <td><%= user.address %></td>
+        <td><%= user.email %></td>
+        <td><%= user.decorated_created_at %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= will_paginate users %>
